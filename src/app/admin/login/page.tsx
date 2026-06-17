@@ -54,9 +54,9 @@ export default function AdminLoginPage() {
       <div className="w-full max-w-md bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 p-8 z-10 transition-all duration-300">
         <div className="text-center mb-8">
           <img
-            src="/assets/logo_pt_ideto.jpeg"
+            src="/assets/logo_pt_ideto_circle.png"
             alt="Logo PT Ideto"
-            className="mx-auto h-16 w-auto rounded-lg object-contain mb-4 bg-white p-1 border border-emerald-100 shadow-sm"
+            className="mx-auto h-16 w-auto object-contain mb-4"
           />
           <h2 className="text-xl font-bold text-gray-800 tracking-tight">
             PT IDETO KONSULTAN INDONESIA

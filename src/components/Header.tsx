@@ -19,10 +19,10 @@ export default function Header() {
       <div className="container header-container">
         <Link href="/" className="logo">
           <img
-            src="/assets/logo_pt_ideto.jpeg"
+            src="/assets/logo_pt_ideto_circle.png"
             alt="Logo PT Ideto"
             className="logo-img"
-            style={{ width: "auto", height: "42px", borderRadius: "6px", objectFit: "contain" }}
+            style={{ width: "auto", height: "42px", objectFit: "contain" }}
           />
           <div className="logo-text">
             <span className="logo-title">{COMPANY.name}</span>

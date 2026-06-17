@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   description: COMPANY.description,
   icons: {
-    icon: "/assets/logo_pt_ideto.jpeg",
+    icon: "/assets/logo_pt_ideto_circle.png",
   },
 };
 
@@ -45,9 +45,9 @@ export default function RootLayout({
               <div className="footer-brand">
                 <div className="logo-white-group">
                   <img
-                    src="/assets/logo_pt_ideto.jpeg"
+                    src="/assets/logo_pt_ideto_circle.png"
                     alt="Logo PT Ideto"
-                    style={{ width: "auto", height: "42px", borderRadius: "6px", backgroundColor: "white", padding: "2px" }}
+                    style={{ width: "auto", height: "42px" }}
                   />
                   <div className="logo-text-white">
                     <span className="fw-bold">{COMPANY.name}</span>

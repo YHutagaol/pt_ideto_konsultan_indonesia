@@ -63,9 +63,9 @@ export default function AdminLayoutWrapper({
       <aside className="admin-sidebar">
         <div className="admin-sidebar-header" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <img
-            src="/assets/logo_pt_ideto.jpeg"
+            src="/assets/logo_pt_ideto_circle.png"
             alt="Logo PT Ideto"
-            style={{ width: "auto", height: "30px", borderRadius: "4px", backgroundColor: "white", padding: "1px" }}
+            style={{ width: "auto", height: "30px" }}
           />
           <span>Admin Panel</span>
         </div>
