@@ -1,0 +1,28 @@
+# Dependencies
+node_modules
+
+# Next.js build output
+.next
+out
+build
+
+# Production / misc artifacts
+*.tsbuildinfo
+next-env.d.ts
+
+# Environment variables (keep .env.example)
+.env
+.env*.local
+
+# Prisma local databases (migrations are kept)
+/prisma/*.db
+dev.db
+
+# Logs
+npm-debug.log*
+
+# OS files
+.DS_Store
+
+# Archived pre-migration static site (kept locally, not tracked)
+_legacy_static
