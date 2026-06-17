@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     template: `%s - ${COMPANY.fullName}`,
   },
   description: COMPANY.description,
+  icons: {
+    icon: "/assets/logo_pt_ideto.jpeg",
+  },
 };
 
 export default function RootLayout({
