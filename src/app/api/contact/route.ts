@@ -43,17 +43,19 @@ export async function POST(request: Request) {
 💬 *Pesan:*
 ${message}`;
 
-      fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          chat_id: chatId,
-          text,
-          parse_mode: "Markdown",
-        }),
-      }).catch((err) => {
+      try {
+        await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text,
+            parse_mode: "Markdown",
+          }),
+        });
+      } catch (err) {
         console.error("Telegram API Error:", err);
-      });
+      }
     }
 
     return NextResponse.json(
