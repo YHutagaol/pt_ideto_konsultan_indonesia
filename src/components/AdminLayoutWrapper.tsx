@@ -18,6 +18,12 @@ export default function AdminLayoutWrapper({
   const pathname = usePathname();
   const router = useRouter();
   const [isAuthorized, setIsAuthorized] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  // Automatically close sidebar when pathname changes
+  useEffect(() => {
+    setIsSidebarOpen(false);
+  }, [pathname]);
 
   // Menyembunyikan header/footer web publik saat sedang membuka halaman admin
   useEffect(() => {
@@ -57,13 +63,6 @@ export default function AdminLayoutWrapper({
       </div>
     );
   }
-
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  // Automatically close sidebar when pathname changes
-  useEffect(() => {
-    setIsSidebarOpen(false);
-  }, [pathname]);
 
   return (
     <div className="admin-layout bg-gray-light" style={{ minHeight: "100vh" }}>
