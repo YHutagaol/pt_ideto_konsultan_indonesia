@@ -58,9 +58,43 @@ export default function AdminLayoutWrapper({
     );
   }
 
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  // Automatically close sidebar when pathname changes
+  useEffect(() => {
+    setIsSidebarOpen(false);
+  }, [pathname]);
+
   return (
     <div className="admin-layout bg-gray-light" style={{ minHeight: "100vh" }}>
-      <aside className="admin-sidebar">
+      {/* Mobile Top Bar */}
+      <div className="admin-mobile-header">
+        <button 
+          className="admin-hamburger" 
+          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+          aria-label="Toggle Navigation Menu"
+        >
+          <i className={`fas ${isSidebarOpen ? "fa-times" : "fa-bars"}`}></i>
+        </button>
+        <div className="admin-mobile-logo">
+          <img
+            src="/assets/logo_pt_ideto_circle.png"
+            alt="Logo PT Ideto"
+            style={{ width: "auto", height: "24px" }}
+          />
+          <span style={{ fontSize: "14px", fontWeight: "bold" }}>Admin Panel</span>
+        </div>
+      </div>
+
+      {/* Dimmed Overlay on Mobile when Sidebar is Open */}
+      {isSidebarOpen && (
+        <div 
+          className="admin-sidebar-overlay" 
+          onClick={() => setIsSidebarOpen(false)}
+        ></div>
+      )}
+
+      <aside className={`admin-sidebar ${isSidebarOpen ? "open" : ""}`}>
         <div className="admin-sidebar-header" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <img
             src="/assets/logo_pt_ideto_circle.png"

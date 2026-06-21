@@ -1716,3 +1716,87 @@ html {
   scroll-padding-top: 80px;
   /* offset for fixed header */
 }
+
+/* =========================================================================
+   15. MOBILE ADMIN RESPONSIVE STYLES
+   ========================================================================= */
+.admin-mobile-header {
+  display: none;
+  background-color: #0c361e;
+  color: white;
+  padding: 14px 20px;
+  align-items: center;
+  gap: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 101;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.admin-hamburger {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  transition: opacity 0.2s;
+}
+
+.admin-hamburger:hover {
+  opacity: 0.8;
+}
+
+.admin-mobile-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 99;
+}
+
+@media (max-width: 768px) {
+  .admin-layout {
+    flex-direction: column;
+  }
+
+  .admin-mobile-header {
+    display: flex;
+  }
+
+  .admin-sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    height: 100vh;
+    transition: left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 100;
+  }
+
+  .admin-sidebar.open {
+    left: 0;
+  }
+
+  .admin-sidebar-overlay {
+    display: block;
+  }
+
+  .admin-main-content {
+    padding: 20px 15px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
